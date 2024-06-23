@@ -10,22 +10,20 @@ export default{
 	},
 	methods: {
 		login(){
-			this.$store.state.user = {"token":"jhjhj","username":"GURU-FIRECRACKER"}
-			this.$router.push('/dashboard')
-			// let data = {
-			// 	"username":this.username,
-			// 	"password":this.password
-			// }
-			// axios.post("login/", data)
-			// .then((res)=>{
-			// 	this.useNotifySuccess("Kaze kandi !")
-			// 	this.$store.state.user = res.data
-			// 	this.$router.push('/dashboard')
-			// })
-			// .catch((err)=>{
-			// 	console.log(err)
-			// 	this.useNotifyError("Welcomme")
-			// }).finally(()=>this.isLoading=false)
+			let data = {
+				"username":this.username,
+				"password":this.password
+			}
+			axios.post("login/", data)
+			.then((res)=>{
+				this.useNotifySuccess("Kaze kandi !")
+				this.$store.state.user = res.data
+				this.$router.push('/dashboard')
+			})
+			.catch((err)=>{
+				console.log(err)
+				this.useNotifyError("Welcomme")
+			}).finally(()=>this.isLoading=false)
 		}
 	},
 }

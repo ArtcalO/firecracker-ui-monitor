@@ -3,20 +3,9 @@
 		data(){
 			return{
 				interval:null,
-				last_id:null
 			}
 		},
 		watch: {
-			"last_id":{
-				deep:true,
-			      handler(new_val){
-			        if(!!new_val){
-			          localStorage.setItem('last_id', JSON.stringify(new_val));
-			        } else {
-			          localStorage.removeItem('last_id')
-			        }
-			      }
-			},
 			"$store.state.user":{
 		      deep:true,
 		      handler(new_val){
@@ -33,7 +22,6 @@
 			var user = JSON.parse(localStorage.getItem('user'));
 		    if(user) {
 		      this.$store.state.user = user;
-		      this.fetchNotification()
 		    }
 
 		},

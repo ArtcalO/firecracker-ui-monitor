@@ -10,14 +10,9 @@ export default createStore({
 
     users:[],
     appName:"GURU-FIRECRACKER",
-    products:[],
-    supply_product:[],
-    outlays:[],
-    main_stocks:[],
-    lossShop:[],
-    lossMainStock:[],
-    tr_stock:[],
-    cart_visible:false,
+    OSes:[],
+    root_files:[],
+    iso_files:[],
   },
   computed: {
     accessToken() {

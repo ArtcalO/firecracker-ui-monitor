@@ -7,7 +7,7 @@ function url(){
   if(locals.includes(base_host)){
     base_url = window.location.protocol+"//"+base_host+":8000"
   }
-  return base_url + '/api';
+  return base_url + '/api/v1';
 }
 export const axiosService = axios.create({
 	baseURL: url()

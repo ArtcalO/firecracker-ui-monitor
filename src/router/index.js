@@ -6,9 +6,6 @@ import store from '../store'
 
 import LoginView from '../views/auth/LoginView.vue'
 
-//Dasboard
-import DashboardView from '../views/dashboard/DashboardView.vue'
-
 
 const routes= [
     {
@@ -24,12 +21,76 @@ const routes= [
             {
               path: '',
               name: 'dashboard',
-              component: DashboardView,
+              component: () => import('../views/dashboard/DashboardView.vue'),
+            },
+          ]
+        },
+        {
+          path: 'oses',
+
+          children: [
+            {
+              path: '',
+              name: 'oses',
+              component: () => import('../views/oses/OSView.vue'),
+            },
+            {
+              path: 'create',
+              name: 'createOS',
+              component: () => import('../views/oses/CreateOS.vue'),
+            },
+          ]
+        },
+        {
+          path: 'rootFiles',
+
+          children: [
+            {
+              path: '',
+              name: 'rootFiles',
+              component: () => import('../views/rootFiles/RootFiles.vue'),
+            },
+            {
+              path: 'create',
+              name: 'createRootFile',
+              component: () => import('../views/rootFiles/CreateRootFile.vue'),
+            },
+          ]
+        },
+        {
+          path: 'isoFiles',
+
+          children: [
+            {
+              path: '',
+              name: 'isoFiles',
+              component: () => import('../views/isoFiles/ISOView.vue'),
+            },
+            {
+              path: 'create',
+              name: 'createISOFile',
+              component: () => import('../views/isoFiles/CreateISO.vue'),
+            },
+          ]
+        },
+        {
+          path: 'vms',
+
+          children: [
+            {
+              path: '',
+              name: 'vms',
+              component: () => import('../views/vms/VMSView.vue'),
+            },
+            {
+              path: 'create',
+              name: 'createVM',
+              component: () => import('../views/vms/CreateVM.vue'),
             },
           ]
         },
       ],
-      meta: { requiresAuth: false },
+      meta: { requiresAuth: true },
     },
     {
       path: '/login',

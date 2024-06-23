@@ -136,6 +136,38 @@ export default{
         exact=""
       >
       </v-list-item>
+      <v-list-item
+        prepend-icon="mdi-monitor-dashboard"
+        title="OS"
+        :to="{ name: 'oses' }"
+        link
+        exact=""
+      >
+      </v-list-item>
+      <v-list-item
+        prepend-icon="mdi-monitor-dashboard"
+        title="Root Files"
+        :to="{ name: 'rootFiles' }"
+        link
+        exact=""
+      >
+      </v-list-item>
+      <v-list-item
+        prepend-icon="mdi-monitor-dashboard"
+        title="ISO Files"
+        :to="{ name: 'isoFiles' }"
+        link
+        exact=""
+      >
+      </v-list-item>
+      <v-list-item
+        prepend-icon="mdi-monitor-dashboard"
+        title="VMS"
+        :to="{ name: 'vms' }"
+        link
+        exact=""
+      >
+      </v-list-item>
     </v-list>
     
   </v-navigation-drawer>
