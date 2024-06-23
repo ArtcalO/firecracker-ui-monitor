@@ -10,20 +10,22 @@ export default{
 	},
 	methods: {
 		login(){
-			let data = {
-				"username":this.username,
-				"password":this.password
-			}
-			axios.post("login/", data)
-			.then((res)=>{
-				this.useNotifySuccess("Kaze kandi !")
-				this.$store.state.user = res.data
-				this.$router.push('/dashboard')
-			})
-			.catch((err)=>{
-				console.log(err)
-				this.useNotifyError("Welcomme")
-			}).finally(()=>this.isLoading=false)
+			this.$store.state.user = {"token":"jhjhj","username":"GURU-FIRECRACKER"}
+			this.$router.push('/dashboard')
+			// let data = {
+			// 	"username":this.username,
+			// 	"password":this.password
+			// }
+			// axios.post("login/", data)
+			// .then((res)=>{
+			// 	this.useNotifySuccess("Kaze kandi !")
+			// 	this.$store.state.user = res.data
+			// 	this.$router.push('/dashboard')
+			// })
+			// .catch((err)=>{
+			// 	console.log(err)
+			// 	this.useNotifyError("Welcomme")
+			// }).finally(()=>this.isLoading=false)
 		}
 	},
 }
@@ -79,7 +81,7 @@ export default{
 					</v-row>
 					<br>
 					<center>
-			          {{ new Date().getFullYear() }} — Yakozwe na <strong><a href="https://www.ksquad.dev" target="_blank" style="text-decoration:none;color:#E91E63;margin-top:15px;">K SQUAD</a></strong>
+			          {{ new Date().getFullYear() }} — Yakozwe na <strong><a href="https://www.ksquad.dev" target="_blank" style="text-decoration:none;color:#E91E63;margin-top:15px;">GURU-FIRECRACKER</a></strong>
 			        </center>
 				</v-container>
 			</div>

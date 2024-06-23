@@ -130,79 +130,8 @@ export default{
       <v-list-subheader>K SHOP</v-list-subheader>
       <v-list-item
         prepend-icon="mdi-monitor-dashboard"
-        title="Utilisateurs"
-        :to="{ name: 'users' }"
-        link
-        exact=""
-      >
-      </v-list-item>
-      <v-list-item
-        v-if="!active_user_is('boutiquier')"
-        prepend-icon="mdi-monitor-dashboard"
-        title="Produits / Articles"
-        :to="{ name: 'products' }"
-        link
-        exact=""
-      >
-      </v-list-item>
-      <v-list-item
-        v-if="!active_user_is('boutiquier')"
-        prepend-icon="mdi-monitor-dashboard"
-        title="Stock principale"
-        :to="{ name: 'mainStock' }"
-        link
-        exact=""
-      >
-      </v-list-item>
-      <v-list-item
-        prepend-icon="mdi-monitor-dashboard"
-        title="Stock Transferé"
-        :to="{ name: 'transferedStock' }"
-        link
-        exact=""
-      >
-      </v-list-item>
-      <v-list-item
-        prepend-icon="mdi-monitor-dashboard"
-        v-if="active_user_is('boutiquier') || active_user.is_superuser"
-        title="Stock Boutique"
-        :to="{ name: 'shopStock' }"
-        link
-        exact=""
-      >
-      </v-list-item>
-      <v-list-item
-        v-if="active_user_is('boutiquier') || active_user.is_superuser"
-        prepend-icon="mdi-monitor-dashboard"
-        title="Ventes"
-        :to="{ name: 'sales' }"
-        link
-        exact=""
-      >
-      </v-list-item>
-      <v-list-item
-        v-if="!active_user_is('responsable')"
-        prepend-icon="mdi-monitor-dashboard"
-        title="Depenses"
-        :to="{ name: 'outLays' }"
-        link
-        exact=""
-      >
-      </v-list-item>
-       <v-list-item
-        v-if="active_user_is('boutiquier') || active_user.is_superuser"
-        prepend-icon="mdi-monitor-dashboard"
-        title="Casses Boutique"
-        :to="{ name: 'lossShop' }"
-        link
-        exact=""
-      >
-      </v-list-item>
-      <v-list-item
-        v-if="active_user_is('responsable') || active_user.is_superuser"
-        prepend-icon="mdi-monitor-dashboard"
-        title="Casses Stock Principale"
-        :to="{ name: 'lossMainStock' }"
+        title="Dashboard"
+        :to="{ name: 'dashboard' }"
         link
         exact=""
       >
